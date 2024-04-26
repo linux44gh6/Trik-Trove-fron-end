@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import '../Css/Banner.css'
+import "../Css/Banner.css"
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { useRef } from 'react';
 
