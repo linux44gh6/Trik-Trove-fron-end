@@ -67,7 +67,8 @@ const Banner = () => {
 
                 </SwiperSlide>
 
-                   <SwiperSlide className='slider4'>  <div className=' space-y-2'>
+                   <SwiperSlide className='slider4 '>  
+                   <div className=' space-y-2 absolute z-10'>
                  <div>
                   <h1 className='font1 text-white lg:text-7xl text-left font-extrabold'>Honest journy to <br />extraOrdinary places</h1> 
                   </div>

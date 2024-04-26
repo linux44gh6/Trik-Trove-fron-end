@@ -6,7 +6,7 @@ const Home = () => {
         <div className="">
 
             <Banner></Banner>
-            <div className="px-5">
+            <div className="lg:px-5">
             <SecondSection></SecondSection>
             </div>
         </div>
