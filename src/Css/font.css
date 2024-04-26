@@ -1,0 +1,15 @@
+
+.font1 {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+}
+.font2 {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Roboto+Slab:wght@100..900&display=swap');
+
