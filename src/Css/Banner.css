@@ -61,7 +61,7 @@
   .slider2{
     background-image: url("https://i.ibb.co/vJxnCwg/107.jpg");
     background-repeat:no-repeat;
-    background-position: top center;
+    background-position: bottom, center;
     background-size: cover;
     object-fit: cover;
   }

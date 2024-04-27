@@ -2,8 +2,9 @@ import PropTypes from 'prop-types'
 import { FaDollarSign } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { TiWorld } from "react-icons/ti";
+import { NavLink } from 'react-router-dom';
 const Place = ({ place }) => {
-    const {image,tourists_spot_name,location,short_description,country_Name,average_cost}=place
+    const {image,tourists_spot_name,location,short_description,country_Name,average_cost,_id}=place
     return (
         <div>
             <div className="card h-[560px]  bg-base-100 shadow-xl w-full ">
@@ -17,7 +18,9 @@ const Place = ({ place }) => {
                         <h1 className='flex items-center text-xl font-semibold'><FaDollarSign className='text-2xl'></FaDollarSign>{average_cost}</h1>
                     </div>
                     <div className="card-actions">
-                        <button className="btn w-full border border-amber-700 hover:bg-amber-600  hover:text-white text-lg ">View Details</button>
+                       <NavLink to={`/details/${_id}`} className='w-full'>
+                       <button className="btn w-full border border-amber-700 hover:bg-amber-600  hover:text-white text-lg ">View Details</button>
+                       </NavLink>
                     </div>
                 </div>
             </div>

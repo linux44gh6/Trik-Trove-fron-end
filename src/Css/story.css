@@ -1,0 +1,67 @@
+.swiper2 {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide2 {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide2 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slider11{
+    background-image: url('https://i.ibb.co/7Xw1GQt/pexels-andreimike-1271619.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    object-fit: cover;
+  }
+  .slider12{
+    background-image: url('https://i.ibb.co/5k3Hr5f/pexels-julita-pasja1000-79378705-8741956.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    object-fit: cover;
+  }
+  
+  .slider13{
+    background-image: url('https://i.ibb.co/dg7LkK5/pexels-saikat-ghosh-323099-914128.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    object-fit: cover;
+  }
+  .slider14{
+    background-image: url('https://i.ibb.co/CWZsCvj/pexels-belle-co-99483-1000445.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    object-fit: cover;
+  }
+  
+  .slider15{
+    background-image: url('https://i.ibb.co/dKjhKVb/pexels-pixabay-161293.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    object-fit: cover;
+  }
+  .slider16{
+    background-image: url('https://i.ibb.co/f8H0YPT/pexels-wildlittlethingsphoto-4453153.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    object-fit: cover;
+  }
+  

@@ -2,10 +2,11 @@ import { NavLink } from "react-router-dom";
 import '../Css/font.css'
 const NavBar = () => {
     const link=<>
-    <NavLink><li className="font1 text-xl lg:text-white">Home</li></NavLink>
-    <NavLink><li className="font1 text-xl lg:text-white">All Tourists Spot</li></NavLink>
-    <NavLink><li className="font1 text-xl lg:text-white">Add Tourists Spot</li></NavLink>
-    <NavLink><li className="font1 text-xl lg:text-white">My List</li></NavLink>
+   
+    <NavLink   className={({isActive})=>isActive?'font1 text-xl lg:text-white border-2 border-amber-600 px-3 bg-amber-600 rounded-sm':'font1 text-xl lg:text-white'}   to='/'><li >Home</li></NavLink>
+    <NavLink   className={({isActive})=>isActive?'font1 text-xl lg:text-white border-2 border-amber-600 px-3 bg-amber-600 rounded-sm':'font1 text-xl lg:text-white'} to='/allSpot'><li>All Tourists Spot</li></NavLink>
+    <NavLink   className={({isActive})=>isActive?'font1 text-xl lg:text-white border-2 border-amber-600 px-3 bg-amber-600 rounded-sm':'font1 text-xl lg:text-white'} to='/addSpot'><li>Add Tourists Spot</li></NavLink>
+    <NavLink   className={({isActive})=>isActive?'font1 text-xl lg:text-white border-2 border-amber-600 px-3 bg-amber-600 rounded-sm':'font1 text-xl lg:text-white'}  to='/myList'><li>My List</li></NavLink>
     </>
     return (
         <div>
