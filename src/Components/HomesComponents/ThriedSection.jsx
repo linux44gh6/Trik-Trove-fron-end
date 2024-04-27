@@ -1,7 +1,7 @@
 import '../../Css/ThriedSection.css'
 const ThriedSection = () => {
     return (
-        <div className='bgi2 h-[70vh]'>
+        <div className='bgi2 h-[70vh] '>
              <div className="flex-col justify-center px-2 md:px-5 lg:px-10  pt-[10%] md:pt-[5%] 
           lg:pt-[2%] xl:pt-[5%] z-10 absolute md:space-y-1 lg:space-y-2">
             <h1 className="text-white font1 text-xl md:text-xl lg:text-2xl">-Introducing Travel Adventures</h1>

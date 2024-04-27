@@ -9,7 +9,7 @@ const Place = ({ place }) => {
             <div className="card h-[560px]  bg-base-100 shadow-xl w-full ">
                 <figure><img className='h-[300px]' src={image} alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title font1 text-3xl font-extrabold">{tourists_spot_name}</h2>
+                    <h2 className="card-title font1 text-3xl font-extrabold hover:text-amber-600 transition-all">{tourists_spot_name}</h2>
                     <p className='font2 text-lg text-gray-600 font-semibold'>{short_description}</p>
                     <div className='flex gap-2 lg:gap-10'>
                         <h1 className='flex items-center text-xl font-semibold'><TiWorld className='text-2xl'></TiWorld>{country_Name}</h1>
