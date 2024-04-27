@@ -11,7 +11,8 @@ import Home from "../Pagges/Home";
       children:[
         {
             path:'/',
-            element:<Home></Home>
+            element:<Home></Home>,
+            loader:()=>fetch('http://localhost:5000/places')
         }
       ]
     },

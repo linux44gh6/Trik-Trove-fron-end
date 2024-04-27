@@ -2,14 +2,14 @@ import { NavLink } from "react-router-dom";
 import '../Css/font.css'
 const NavBar = () => {
     const link=<>
-    <NavLink><li className="font1 text-xl text-white">Home</li></NavLink>
-    <NavLink><li className="font1 text-xl text-white">All Tourists Spot</li></NavLink>
-    <NavLink><li className="font1 text-xl text-white">Add Tourists Spot</li></NavLink>
-    <NavLink><li className="font1 text-xl text-white">My List</li></NavLink>
+    <NavLink><li className="font1 text-xl lg:text-white">Home</li></NavLink>
+    <NavLink><li className="font1 text-xl lg:text-white">All Tourists Spot</li></NavLink>
+    <NavLink><li className="font1 text-xl lg:text-white">Add Tourists Spot</li></NavLink>
+    <NavLink><li className="font1 text-xl lg:text-white">My List</li></NavLink>
     </>
     return (
         <div>
-            <div className="navbar  fixed z-10">
+            <div className="navbar bg-[#ffffff6d]  fixed z-10">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
