@@ -7,7 +7,7 @@ const SecondSection = () => {
             <h1 className="text-white font1 md:text-xl lg:text-2xl">-Introducing Travel Adventures</h1>
             <h1 className="text-white font1 text-xl md:text-2xl lg:text-4xl xl:text-6xl xl:font-extrabold">Hosted Journeys to Extraordinary Places</h1>
             <p className="text-white lg:font2 w-full lg:w-[800px] ">Our carefully curated itineraries take you beyond the ordinary, immersing you in the wonders of the worlds most remarkable destinations.</p>
-            <button className="btn px-20 bg-amber-600 hover:bg-amber-600 md:text-lg lg:text-lg text-white">Visit Now</button>
+            <button className="btn rounded-none px-20 bg-amber-600 hover:bg-amber-600 md:text-lg lg:text-lg text-white">Visit Now</button>
           </div>
         </div>
     );
