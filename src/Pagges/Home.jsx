@@ -32,7 +32,7 @@ const Home = () => {
 
                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
                {
-                    places.map(place=><Packages
+                    places.slice(0,6).map(place=><Packages
                     key={place._id}
                     place={place}
                     ></Packages>)
