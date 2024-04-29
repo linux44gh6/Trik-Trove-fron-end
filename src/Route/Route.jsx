@@ -9,11 +9,15 @@ import AllSpot from "../Pagges/AllSpot";
 import MyList from "../Pagges/MyList";
 import Login from "../Pagges/Login";
 import Registration from "../Pagges/Registration";
+import PrivetRoute from "../PriverRoute/PrivetRoute";
+import Error from "../Pagges/Error";
+import UpdatePlace from "../Pagges/UpdatePlace";
 
   const router = createBrowserRouter([
     {
       path: "/",
       element:<Root></Root>,
+      errorElement:<Error></Error>,
       children:[
         {
             path:'/',
@@ -22,12 +26,12 @@ import Registration from "../Pagges/Registration";
         },
         {
           path:'/details/:id',
-          element:<ViewDetails></ViewDetails>,
+          element:<PrivetRoute><ViewDetails></ViewDetails></PrivetRoute>,
           loader:({params})=>fetch(`http://localhost:5000/places/${params.id}`)
         }
         ,{
           path:'/addSpot',
-          element:<AddSpot></AddSpot>
+          element:<PrivetRoute><AddSpot></AddSpot></PrivetRoute>
         },
         {
           path:'/allSpot',
@@ -35,8 +39,9 @@ import Registration from "../Pagges/Registration";
           loader:()=>fetch('http://localhost:5000/places')
         },
         {
-          path:'/myList',
-          element:<MyList></MyList>
+          path:'/myList/:email',
+          element:<PrivetRoute><MyList></MyList></PrivetRoute>,
+          loader:({params})=>fetch(`http://localhost:5000/place/${params.email}`)
         },
         {
           path:'/login',
@@ -45,6 +50,10 @@ import Registration from "../Pagges/Registration";
         {
           path:'/registration',
           element:<Registration></Registration>
+        },
+        {
+          path:'/update/:id',
+          element:<UpdatePlace></UpdatePlace>
         }
       
       ]

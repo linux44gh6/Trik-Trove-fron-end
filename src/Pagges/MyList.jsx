@@ -1,55 +1,36 @@
+import { useLoaderData } from "react-router-dom";
+import UserPlace from "../Components/UserPlace";
 
 const MyList = () => {
+    const usersPlace = useLoaderData()
+        
     return (
-        <div className="pt-14 bg-black h-[100vh]">
-            <div className="container p-2 mx-auto sm:p-4 dark:text-gray-800">
-                <h2 className="mb-4 text-2xl font-semibold leading-tight">Invoices</h2>
-                <div className="overflow-x-auto">
-                    <table className="min-w-full text-xs">
-                        <colgroup>
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col />
-                            <col className="w-24" />
-                        </colgroup>
-                        <thead className="dark:bg-gray-300 border-b border-opacity-20">
-                            <tr className="text-left">
-                                <th className="p-3">Tour Spot</th>
-                                <th className="p-3">Country Name</th>
-                                <th className="p-3">Travel Time</th>
-                                <th className="p-3 text-right">Amount</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className="border-b border-opacity-20 dark:border-gray-300 dark:bg-gray-50">
+        <div className="pt-14 bg-black h-[100vh]  ">
+            <table className="table w-full mt-10">
+                {/* head */}
+                <thead className="w-full">
+                    <tr className="flex justify-between">
+                        
+                        <th className=" text-xl text-white">Name</th>
+                        <th className=" text-xl text-white">Country</th>
+                        <th className=" text-xl text-white">Amount</th>
+                        <th className=" text-xl text-white"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {/* row 1 */}
+                    
+                    {
+                usersPlace.map(place =><UserPlace
+                key={place._id}
+                place={place}
+                ></UserPlace>)
+            }
+                </tbody>
+            </table>
 
-                                <td className="p-3">
-                                    <p>Microsoft Corporation</p>
-                                </td>
-                                <td className="p-3">
-                                    <p>14 Jan 2022</p>
-                                    <p className="dark:text-gray-600">Friday</p>
-                                </td>
-                                <td className="p-3">
-                                    <p>01 Feb 2022</p>
-                                    <p className="dark:text-gray-600">Tuesday</p>
-                                </td>
-                                <td className="p-3 text-right">
-                                    <p>$15,792</p>
-                                </td>
-                                <td className="p-3 text-right">
-                                    <div className="join join-vertical gap-4">
-                                        <button className="btn join-item">Update</button>
-                                        <button className="btn join-item">Delete</button>
-                                    </div>
-                                </td>
-                            </tr>                      
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+           
+
         </div>
     );
 };

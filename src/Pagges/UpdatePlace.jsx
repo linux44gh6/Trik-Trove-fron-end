@@ -1,48 +1,11 @@
-import '../Css/addSpot.css'
-import Swal from 'sweetalert2'
-const AddSpot = () => {
+
+const UpdatePlace = () => {
     const handleToSubmit=e=>{
         e.preventDefault()
-        const form=e.target
-        const name=form.Name.value
-        const email=form.email.value
-        const tourists_spot_name=form.name2.value
-        const short_description=form.description.value
-        const country_Name=form.country_name.value
-        const average_cost=form.average_cost.value
-        const seasonality=form.seasonality.value
-        const travel_time=form.travel_time.value
-        const totalVisitorsPerYear=form.totalVisitorsPerYear.value
-        const location=form.location.value
-        const image=form.image.value
-       const places={name,email,tourists_spot_name,short_description,country_Name,average_cost,seasonality,travel_time,totalVisitorsPerYear,image,location}
-       console.log(places);
-        //send data to the server side
-
-        fetch('http://localhost:5000/places',{
-            method:"POST",
-            headers:{
-                "content-type":"Application/json"
-            },
-            body:JSON.stringify(places)
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            if(data.insertedId){
-                Swal.fire({
-                    title: 'Success',
-                    text: 'Place added successful',
-                    icon: 'success',
-                    confirmButtonText: 'Ok'
-                  })
-            }
-            form.reset()
-            console.log(data);
-        })
     }
     return (
-        <div className='spot h-[100vh]  w-full pt-12'>
-            <div className=" p-10 w-full absolute  z-10">
+        <div className="bg-black h-[100vh] pt-10">
+             <div className=" p-10 w-full absolute  z-10">
             <h1 className="text-6xl font-bold mb-5 text-center uppercase text-amber-600">Add Tourist spot</h1>
             <form onSubmit={handleToSubmit} className=" space-y-3 content-center">
             <div className="flex gap-4 justify-center items-center">
@@ -81,4 +44,4 @@ const AddSpot = () => {
     );
 };
 
-export default AddSpot;
+export default UpdatePlace;

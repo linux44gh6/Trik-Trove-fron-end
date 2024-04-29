@@ -1,12 +1,18 @@
 import { NavLink } from "react-router-dom";
 import '../Css/font.css'
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider";
 const NavBar = () => {
+  const {user,logOut}=useContext(AuthContext)
+  
+  const handToLogOut=()=>{
+    logOut()
+  }
     const link=<>
-   
     <NavLink   className={({isActive})=>isActive?'font1 text-xl lg:text-white border-2 border-amber-600 px-3 bg-amber-600 rounded-sm':'font1 text-xl lg:text-white'}   to='/'><li >Home</li></NavLink>
     <NavLink   className={({isActive})=>isActive?'font1 text-xl lg:text-white border-2 border-amber-600 px-3 bg-amber-600 rounded-sm':'font1 text-xl lg:text-white'} to='/allSpot'><li>All Tourists Spot</li></NavLink>
     <NavLink   className={({isActive})=>isActive?'font1 text-xl lg:text-white border-2 border-amber-600 px-3 bg-amber-600 rounded-sm':'font1 text-xl lg:text-white'} to='/addSpot'><li>Add Tourists Spot</li></NavLink>
-    <NavLink   className={({isActive})=>isActive?'font1 text-xl lg:text-white border-2 border-amber-600 px-3 bg-amber-600 rounded-sm':'font1 text-xl lg:text-white'}  to='/myList'><li>My List</li></NavLink>
+    <NavLink   className={({isActive})=>isActive?'font1 text-xl lg:text-white border-2 border-amber-600 px-3 bg-amber-600 rounded-sm':'font1 text-xl lg:text-white'}  to={`/myList/${user?.email}`}><li>My List</li></NavLink>
     </>
     return (
         <div>
@@ -28,8 +34,17 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end flex gap-2">
-    <NavLink to='/login'><button className="btn bg-amber-600">Login</button></NavLink>
-    <NavLink to='/registration'><button className="btn bg-amber-600">Register</button></NavLink>
+   {user?<div className="flex items-center gap-2">
+    <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
+  <button className=""><img className=" rounded-full w-12" src={user.
+photoURL} alt="" /></button>
+</div>  
+<NavLink><button onClick={handToLogOut} className="btn bg-amber-600 text-white">LogOut</button></NavLink>
+   </div>:<>
+    <NavLink to='/login'><button className="btn bg-amber-600 text-white hover:bg-amber-600">Login</button></NavLink>
+    <NavLink to='/registration'><button className="btn bg-amber-600 text-white hover:bg-amber-600">Register</button></NavLink>
+   </>
+   }
   </div>
 </div>
         </div>

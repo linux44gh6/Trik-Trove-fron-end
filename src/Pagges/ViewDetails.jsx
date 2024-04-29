@@ -1,5 +1,4 @@
 import { useLoaderData } from "react-router-dom";
-import { FaDollarSign } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { TiWorld } from "react-icons/ti";
 const ViewDetails = () => {

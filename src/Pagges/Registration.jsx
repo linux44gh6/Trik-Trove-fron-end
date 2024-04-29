@@ -1,11 +1,15 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider";
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate, useLocation } from "react-router-dom";
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import Swal from 'sweetalert2'
 
 const Registration = () => {
+    const {createUser,updateUserProfile,loading}=useContext(AuthContext)
+    const [visible,setVisible]=useState(true)
+    const location=useLocation()
+    const from=location?.state||'/'
     const handleToSubmit=e=>{
         e.preventDefault()
         const name=e.target.name.value
@@ -38,6 +42,15 @@ const Registration = () => {
         }
         createUser(email,password)
         .then(result=>{
+            updateUserProfile(name,url)
+            .then(()=>{
+
+                Navigate(from)
+            
+            })
+            .catch(error=>{
+                console.log(error.message);
+            })
             Swal.fire({
                 position: "top-end",
                 icon: "success",
@@ -47,11 +60,15 @@ const Registration = () => {
               });
         })
         .catch(error=>{
-           console.log(error);
+            Swal.fire({
+                icon: "error",
+                title: `${error.message}`,
+                text: "Something went wrong!",
+               
+              });
         })
     }
-    const {createUser}=useContext(AuthContext)
-    const [visible,setVisible]=useState(true)
+   
     return (
         <div className="bg-black z-0">
              <div>

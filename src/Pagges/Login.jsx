@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { NavLink, Navigate } from "react-router-dom";
+import { NavLink, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import { FcGoogle, } from "react-icons/fc";
@@ -7,7 +7,10 @@ import { FaGithub } from "react-icons/fa";
 import { AuthContext } from "../AuthProvider";
 import Swal from 'sweetalert2'
 const Login = () => {
-    const {LogIn}=useContext(AuthContext)
+    const location=useLocation()
+    const Navigate= useNavigate()
+    const from=location?.state || '/'
+    const {LogIn,googleLogIn,gitHubLogIn}=useContext(AuthContext)
     const handleToSubmit=e=>{
         e.preventDefault()
         const email=e.target.email.value
@@ -24,6 +27,7 @@ const Login = () => {
           });
       const user=result.user
       console.log(user);
+      Navigate(from)
       
     })
     .catch(error=>{
@@ -33,10 +37,38 @@ const Login = () => {
     }
 
     const handleToGitHubLogIn=()=>{
-
+        gitHubLogIn()
+        .then(()=>{
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "GitHub Login Success",
+                showConfirmButton: false,
+                timer: 1500
+              });
+          Navigate(from)
+        })
+        .catch(error=>{
+          console.log(error.message);
+        })
     }
     const handleToGoogleLogIn=()=>{
-
+        googleLogIn()
+        .then(result=>{
+          const user=result.user
+          console.log(user);
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "google Login Success",
+            showConfirmButton: false,
+            timer: 1500
+          });
+          Navigate(from)
+        })
+        .catch(error=>{
+          console.log(error.message);
+        })
     }
     const [visible,setVisible]=useState(true)
     return (
@@ -65,13 +97,13 @@ const Login = () => {
          }
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn border-2 border-amber-600">Login</button>
         </div>
         <p>Do you have an Account?please <NavLink to='/registration' className=' text-blue-900 font-bold text-xl underline'>Register</NavLink></p>
       <div className="flex justify-center items-center gap-2 border-t">
         <p className=" font-bold">Login with</p>
-        <button onClick={handleToGoogleLogIn} className=" btn border-2 border-purple-600"><FcGoogle className="text-2xl"></FcGoogle></button>
-        <button onClick={handleToGitHubLogIn} className=" btn border-2 border-purple-600"><FaGithub className="text-2xl"></FaGithub></button>
+        <button onClick={handleToGoogleLogIn} className=" btn border-2 border-amber-600"><FcGoogle className="text-2xl"></FcGoogle></button>
+        <button onClick={handleToGitHubLogIn} className=" btn border-2 border-amber-600"><FaGithub className="text-2xl"></FaGithub></button>
       </div>
       </form>
     </div>
