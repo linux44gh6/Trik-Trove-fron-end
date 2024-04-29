@@ -5,6 +5,7 @@ import TouristSection from "../Components/HomesComponents/TouristSection";
 import ThriedSection from "../Components/HomesComponents/ThriedSection";
 import Packages from "../Components/HomesComponents/Packages";
 import Story from "../Components/HomesComponents/Story";
+import AllCountry from "../Components/HomesComponents/AllCountry";
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
             <div className="">
                 <ThriedSection></ThriedSection>
             </div>
+            <AllCountry></AllCountry>
             <div className="mt-20 lg:px-10">
             <div>
             <h1 className="text-center font1 text-xl md:text-4xl lg:text-5xl xl:7xl font-extrabold">Our Packages</h1>

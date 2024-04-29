@@ -12,6 +12,8 @@ import Registration from "../Pagges/Registration";
 import PrivetRoute from "../PriverRoute/PrivetRoute";
 import Error from "../Pagges/Error";
 import UpdatePlace from "../Pagges/UpdatePlace";
+import CountrySpot from "../Pagges/CountrySpot";
+import SpotDetails from "../Pagges/SpotDetails";
 
   const router = createBrowserRouter([
     {
@@ -22,13 +24,15 @@ import UpdatePlace from "../Pagges/UpdatePlace";
         {
             path:'/',
             element:<Home></Home>,
-            loader:()=>fetch('http://localhost:5000/places')
+            loader:()=>fetch('http://localhost:5000/places'),
+            
         },
         {
           path:'/details/:id',
           element:<PrivetRoute><ViewDetails></ViewDetails></PrivetRoute>,
           loader:({params})=>fetch(`http://localhost:5000/places/${params.id}`)
         }
+        
         ,{
           path:'/addSpot',
           element:<PrivetRoute><AddSpot></AddSpot></PrivetRoute>
@@ -53,7 +57,18 @@ import UpdatePlace from "../Pagges/UpdatePlace";
         },
         {
           path:'/update/:id',
-          element:<UpdatePlace></UpdatePlace>
+          element:<UpdatePlace></UpdatePlace>,
+          loader:({params})=>fetch(`http://localhost:5000/places/${params.id}`)
+        },
+        {
+          path:'/place/:name',
+          element:<CountrySpot></CountrySpot>,
+          loader:({params})=>fetch(`http://localhost:5000/allCountry/${params.name}`)
+        },
+        {
+          path:'/detail/:id',
+          element:<PrivetRoute><SpotDetails></SpotDetails></PrivetRoute>,
+          loader:({params})=>fetch(`http://localhost:5000/country/${params.id}`)
         }
       
       ]
