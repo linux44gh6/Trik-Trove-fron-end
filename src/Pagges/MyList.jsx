@@ -14,11 +14,11 @@ const MyList = () => {
                             <col />
                             <col className="w-24" />
                         </colgroup>
-                        <thead className="dark:bg-gray-300">
+                        <thead className="dark:bg-gray-300 border-b border-opacity-20">
                             <tr className="text-left">
-                                <th className="p-3">Client</th>
-                                <th className="p-3">Issued</th>
-                                <th className="p-3">Due</th>
+                                <th className="p-3">Tour Spot</th>
+                                <th className="p-3">Country Name</th>
+                                <th className="p-3">Travel Time</th>
                                 <th className="p-3 text-right">Amount</th>
                             </tr>
                         </thead>
@@ -40,13 +40,12 @@ const MyList = () => {
                                     <p>$15,792</p>
                                 </td>
                                 <td className="p-3 text-right">
-                                    <div className="join join-vertical">
-                                        <button className="btn join-item">Button</button>
-                                        <button className="btn join-item">Button</button>
+                                    <div className="join join-vertical gap-4">
+                                        <button className="btn join-item">Update</button>
+                                        <button className="btn join-item">Delete</button>
                                     </div>
                                 </td>
-                            </tr>
-                           
+                            </tr>                      
                         </tbody>
                     </table>
                 </div>

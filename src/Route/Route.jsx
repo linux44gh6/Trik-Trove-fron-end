@@ -7,6 +7,8 @@ import ViewDetails from "../Pagges/ViewDetails";
 import AddSpot from "../Pagges/AddSpot";
 import AllSpot from "../Pagges/AllSpot";
 import MyList from "../Pagges/MyList";
+import Login from "../Pagges/Login";
+import Registration from "../Pagges/Registration";
 
   const router = createBrowserRouter([
     {
@@ -35,6 +37,14 @@ import MyList from "../Pagges/MyList";
         {
           path:'/myList',
           element:<MyList></MyList>
+        },
+        {
+          path:'/login',
+          element:<Login></Login>
+        },
+        {
+          path:'/registration',
+          element:<Registration></Registration>
         }
       
       ]
