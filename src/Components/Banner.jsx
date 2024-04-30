@@ -5,8 +5,12 @@ import 'swiper/css/navigation';
 import "../Css/Banner.css"
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { useRef } from 'react';
-
+import { useTypewriter } from 'react-simple-typewriter'
 const Banner = () => {
+    const [text] = useTypewriter({
+        words: ['places'],
+        loop: Infinity
+      })
     const progressCircle = useRef(null);
     const progressContent = useRef(null);
     const onAutoplayTimeLeft = (s, time, progress) => {
@@ -35,7 +39,7 @@ const Banner = () => {
 
                  <div className=' space-y-2'>
                  <div>
-                  <h1 className='font1 text-white lg:text-7xl text-left font-extrabold'>Honest journy to <br />extraOrdinary places</h1> 
+                  <h1 className='font1 text-white lg:text-7xl text-left font-extrabold'>Honest journy to <br />extraOrdinary <span className=' text-amber-600'>{text}</span></h1> 
                   </div>
                     <div className='lg:-ms-[480px]'>
                     <button className='btn px-10 rounded-none bg-[#ffffffbc]'>Explore Now</button>
@@ -47,7 +51,7 @@ const Banner = () => {
 
                 <div className=' space-y-2'>
                  <div>
-                  <h1 className='font1 text-white lg:text-7xl text-left font-extrabold'>Honest journy to <br />extraOrdinary places</h1> 
+                  <h1 className='font1 text-white lg:text-7xl text-left font-extrabold'>Honest journy to <br />extraOrdinary <span className=' text-amber-600'>{text}</span></h1> 
                   </div>
                     <div className='lg:-ms-[480px]'>
                     <button className='btn px-10 rounded-none bg-[#ffffffbc]'>Explore Now</button>
@@ -59,7 +63,7 @@ const Banner = () => {
                    <SwiperSlide className='slider3'> 
                     <div className=' space-y-2 z-10 absolute'>
                  <div>
-                  <h1 className='font1 text-white lg:text-7xl text-left font-extrabold'>Honest journy to <br />extraOrdinary places</h1> 
+                  <h1 className='font1 text-white lg:text-7xl text-left font-extrabold'>Honest journy to <br />extraOrdinary <span className=' text-amber-600'>{text}</span></h1> 
                   </div>
                     <div className='lg:-ms-[480px]'>
                     <button className='btn px-10 rounded-none bg-[#ffffffbc]'>Explore Now</button>
@@ -71,7 +75,7 @@ const Banner = () => {
                    <SwiperSlide className='slider4 '>  
                    <div className=' space-y-2 absolute z-10'>
                  <div>
-                  <h1 className='font1 text-white lg:text-7xl text-left font-extrabold'>Honest journy to <br />extraOrdinary places</h1> 
+                  <h1 className='font1 text-white lg:text-7xl text-left font-extrabold'>Honest journy to <br />extraOrdinary <span className=' text-amber-600'>{text}</span></h1> 
                   </div>
                     <div className='lg:-ms-[480px]'>
                     <button className='btn px-10 rounded-none bg-[#ffffffbc]'>Explore Now</button>
