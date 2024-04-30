@@ -1,8 +1,25 @@
-# React + Vite
+Name--TrikTrove
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live-Link--https://tour-spot-fec42.web.app/
 
-Currently, two official plugins are available:
+Bullet-point-
+--Single page application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+--using Privet Route
+
+--Authintication by Firebase
+
+--Data use from MongBD
+
+--BackEnd deployed in vercel
+
+--All image hots into imageBB
+
+Packages--
+
+--React Awesome reveal
+
+--React-simple-typewriter
+
+--using Sweetalert2
+--And and others relvent package 
