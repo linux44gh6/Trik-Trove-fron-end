@@ -6,7 +6,7 @@ import ThriedSection from "../Components/HomesComponents/ThriedSection";
 import Packages from "../Components/HomesComponents/Packages";
 import Story from "../Components/HomesComponents/Story";
 import AllCountry from "../Components/HomesComponents/AllCountry";
-
+import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
     const places=useLoaderData()
@@ -45,9 +45,12 @@ const Home = () => {
             {/* story section */}
 
            <div className="lg:px-10 mt-20 ">
-           <div className="mb-10">
+            <Fade>
+            <div className="mb-10">
            <h1 className="text-center font1 text-xl md:text-4xl lg:text-5xl xl:7xl font-extrabold  p-5">Our Story</h1>
            </div>
+            </Fade>
+           
            <Story></Story>
            </div>
           

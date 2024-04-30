@@ -1,12 +1,13 @@
 
 import { initializeApp } from "firebase/app";
+console.log();
   const firebaseConfig = {
-    apiKey: "AIzaSyC4fJDg3cIA-nUTQigzzcIjngk7xrECSFg",
-    authDomain: "tour-spot-fec42.firebaseapp.com",
-    projectId: "tour-spot-fec42",
-    storageBucket: "tour-spot-fec42.appspot.com",
-    messagingSenderId: "867652161077",
-    appId: "1:867652161077:web:30f6b8547117f41d5f2b7c"
+    apiKey: import.meta.env.VITE_apiKey,
+    authDomain: import.meta.env.VITE_authDomain,
+    projectId: import.meta.VITE_projectId,
+    storageBucket: import.meta.env.VITE_storageBucket,
+    messagingSenderId: import.meta.env.VITE_messagingSenderId,
+    appId: import.meta.env.VITE_appId
   };
   
 
