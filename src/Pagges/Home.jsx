@@ -28,8 +28,8 @@ const Home = () => {
             <AllCountry></AllCountry>
             <div className="mt-20 lg:px-10">
             <div>
-            <h1 className="text-center font1 text-xl md:text-4xl lg:text-5xl xl:7xl font-extrabold">Our Packages</h1>
-            <p className="lg:w-[700px] mx-auto text-center mb-10 font-semibold text-lg text-gray-600 mt-2">Discover a world of possibilities with our meticulously crafted packages, designed to cater to every travelers dream. From thrilling expeditions to serene getaways, our diverse range of packages offers something for everyone.</p>
+            <h1 className="text-center font1 text-xl md:text-4xl lg:text-5xl xl:7xl font-extrabold dark:text-white">Our Packages</h1>
+            <p className="lg:w-[700px] mx-auto text-center mb-10 font-semibold text-lg text-gray-600 mt-2 dark:text-white">Discover a world of possibilities with our meticulously crafted packages, designed to cater to every travelers dream. From thrilling expeditions to serene getaways, our diverse range of packages offers something for everyone.</p>
             </div>
 
                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
@@ -47,7 +47,7 @@ const Home = () => {
            <div className="lg:px-10 mt-20 ">
             <Fade>
             <div className="mb-10">
-           <h1 className="text-center font1 text-xl md:text-4xl lg:text-5xl xl:7xl font-extrabold  p-5">Our Story</h1>
+           <h1 className="text-center font1 text-xl md:text-4xl lg:text-5xl xl:7xl font-extrabold dark:text-white  p-5">Our Story</h1>
            </div>
             </Fade>
            

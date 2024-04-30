@@ -72,7 +72,7 @@ const Login = () => {
     }
     const [visible,setVisible]=useState(true)
     return (
-        <div className=" bg-black pt-10">
+        <div className=" bg-black pt-24 mg:pt-16 lg:pt-16">
             <div className="hero min-h-screen ">
   <div className="hero-content flex-col  w-full">
     <div className="text-center lg:text-left">

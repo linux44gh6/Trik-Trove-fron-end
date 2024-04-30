@@ -43,7 +43,7 @@ const AddSpot = () => {
     return (
         <div className='spot h-[100vh]  w-full pt-12'>
             <div className=" p-10 w-full absolute  z-10">
-            <h1 className="text-6xl font-bold mb-5 text-center uppercase text-amber-600">Add Tourist spot</h1>
+            <h1 className=" text-xl md:4xl lg:text-6xl font-bold mb-5 text-center uppercase text-amber-600">Add Tourist spot</h1>
             <form onSubmit={handleToSubmit} className=" space-y-3 content-center">
             <div className="flex gap-4 justify-center items-center">
            <input type="text" name="Name" placeholder="User Name" className="input input-bordered input-warning w-full max-w-xs" required />

@@ -39,8 +39,8 @@ const MyList = () => {
           
       }
     return (
-        <div className="pt-14 bg-black h-[100vh]  ">
-            <table className="table w-full mt-10">
+        <div className="pt-14 bg-black h-[100vh]">
+            <table className="table lg:w-full mt-10">
                 {/* head */}
                 <thead className="w-full">
                     <tr className="flex justify-between">
@@ -60,7 +60,7 @@ const MyList = () => {
                 <tr className="bg-base-200 flex justify-between">
         
                 <td className=" text-xl font-semibold">{place.tourists_spot_name}</td>
-                <td className=" text-xl font-semibold">{place.country_name}</td>
+                <td className=" text-xl font-semibold">{place.country_Name}</td>
                 <td className=" text-xl font-semibold">{place.average_cost}</td>
                 <td className="flex flex-col gap-2">
                   <NavLink to={`/update/${place?._id}`}><button className="btn border border-amber-600 ">Update</button></NavLink>

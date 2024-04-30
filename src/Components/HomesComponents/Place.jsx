@@ -8,7 +8,7 @@ const Place = ({ place }) => {
     return (
         <div>
             <div className="card h-[560px]  bg-base-100 shadow-xl w-full ">
-                <figure><img className='h-[300px]' src={image} alt="Shoes" /></figure>
+                <figure><img className='h-[300px] hover:scale-110 duration-500' src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title font1 text-3xl font-extrabold hover:text-amber-600 transition-all">{tourists_spot_name}</h2>
                     <p className='font2 text-lg text-gray-600 font-semibold'>{short_description}</p>

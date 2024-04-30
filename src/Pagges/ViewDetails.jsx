@@ -9,19 +9,19 @@ const ViewDetails = () => {
         <div className=" relative">
             <img className=" overlay h-[60vh] w-full object-cover" src={image} alt="" />
 
-            <div className="flex px-10 mt-10 p-5 gap-5">
+            <div className="flex flex-col lg:flex-row px-10 mt-10 p-5 gap-5">
                 <div>
-                    <h1 className=" font-extrabold text-3xl font1">About</h1>
-                    <p className="font-semibold text-gray-600 text-lg">{description}</p>
+                    <h1 className=" font-extrabold text-3xl font1 dark:text-white">About</h1>
+                    <p className="font-semibold text-gray-600 text-lg dark:text-white">{description}</p>
                 </div>
                 <div>
-                <div className="card w-96 bg-base-100 shadow-lg border border-amber-600 space-y-6">
+                <div className="card lg:w-96 bg-base-100 shadow-lg border border-amber-600 space-y-6">
   <div className="card-body space-y-2">
     <div className="flex justify-between border-b-2 border-amber-600 space-y-1">
         <h1><span className=" font-bold text-xl">FROM USD</span> <br /> <span className=" font-semibold">per person</span></h1>
         <h2 className="card-title"><span className="text-7xl">{average_cost}</span></h2>
     </div>
-    <div className="flex gap-10">
+    <div className="flex flex-col lg:flex-row md:flex-row lg:gap-10">
         <h1 className="flex items-center text-xl font-bold"><TiWorld></TiWorld>{country_Name}</h1>
         <h1 className="flex items-center text-xl font-bold"><CiLocationOn></CiLocationOn>{location}</h1>
     </div>
