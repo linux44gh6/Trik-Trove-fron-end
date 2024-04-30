@@ -3,7 +3,7 @@ import NavBar from "../Shared/NavBar";
 import Footer from "../Shared/Footer";
 const Root = () => {
     return (
-        <div>
+        <div className="dark:bg-black">
             <NavBar></NavBar>
             <Outlet></Outlet>
             <Footer></Footer>

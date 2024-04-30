@@ -16,14 +16,14 @@ const UpdatePlace = () => {
         const totalVisitorsPerYear=form.totalVisitorsPerYear.value
         const location=form.location.value
         const image=form.image.value
-        const place2={tourists_spot_name,short_description,country_Name,average_cost,seasonality,travel_time,totalVisitorsPerYear,location,image}
+        const updateData={tourists_spot_name,short_description,country_Name,average_cost,seasonality,travel_time,totalVisitorsPerYear,location,image}
         
-        fetch(`http://localhost:5000/places/${_id}`,{
+        fetch(`http://localhost:5000/update/${_id}`,{
             method:"PUT",
             headers:{
                 "content-type":"application/json"
             },
-            body:JSON.stringify(place2)
+            body:JSON.stringify(updateData)
         })
         .then(res=>res.json())
         .then(data=>{
@@ -39,7 +39,7 @@ const UpdatePlace = () => {
         })
     }
     return (
-        <div className="bg-black h-[100vh] pt-10">
+        <div className="bg-black h-[100vh] pt-10 z-0">
              <div className=" p-10 w-full absolute  z-10">
             <h1 className="text-6xl font-bold mb-5 text-center uppercase text-amber-600">Update Tourist spot</h1>
             <form onSubmit={handleToSubmit} className=" space-y-3 content-center">
